@@ -147,10 +147,30 @@ function HomePage() {
                                 In terms of tech...
                             </div>
                             <div>
-                                <Collapsible trigger="Lorne is learning C++ and gRPC.">
+                                <Collapsible trigger="Lorne is learning C++.">
                                     <div className={"pl-3 mb-3 mt-2"} style={{background: "#61E294", borderRadius: "5px", padding: "5px"}}>
                                         <div>
-                                            insert Github link.
+                                            File Calculator: Calculate the size of a folder's contents recursively, using non-parallel threads, and using parallel threads.
+                                        </div>
+                                        <div>
+                                            Morse: Encode & decode Morse code.
+                                        </div>
+                                        <div>
+                                            Mandelbrot: Generate a Mandelbrot image.
+                                        </div>
+                                        <div>
+                                            Matrix2D & PrimeSum Project: 2D matrix multiplication & summing the first n prime numbers.
+                                        </div>
+                                        <div>
+                                            HashSet, HashMap, ListNode, Vector Project: Implementation of Vector and ListNode & simple games using HashMap and HashSet.
+                                        </div>
+                                        <div>
+                                            <a href={"https://github.com/lorneez/cpp-practice"}>
+                                                Checkout the Github
+                                            </a>
+                                        </div>
+                                        <div>
+                                            Coming soon: Simulation of "ls -l" and "chmod"
                                         </div>
                                     </div>
                                 </Collapsible>
@@ -161,7 +181,10 @@ function HomePage() {
                                 <Collapsible trigger="Lorne is learning AWS.">
                                     <div className={"pl-3 mb-3 mt-2"} style={{background: "#61E294", borderRadius: "5px", padding: "5px"}}>
                                         <div>
-                                            DynamoDB, Amplify, Lambda.
+                                            Learning: DynamoDB, Lambda
+                                        </div>
+                                        <div>
+                                            Using: Route 53, Amplify
                                         </div>
                                     </div>
                                 </Collapsible>
