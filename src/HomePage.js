@@ -30,7 +30,7 @@ function HomePage() {
                                 style={{
                                     fontSize: "70px",
                                     lineHeight: "80px",
-                                    color: ""
+                                    color: "#61E294"
                                 }}
                             >
                                 Lorne Zhang
@@ -45,10 +45,11 @@ function HomePage() {
                                 }}
                             >
                                 <TextLoop>
-                                    <span>Software Engineer</span>
-                                    <span>Fitness Enthusiast</span>
-                                    <span>Cat Lover</span>
-                                    <span>Eagle Scout</span>
+                                    <span style={{color: "#61E294"}}>4th Year at Duke</span>
+                                    <span style={{color: "#61E294"}}>Software Engineer</span>
+                                    <span style={{color: "#61E294"}}>Fitness Enthusiast</span>
+                                    <span style={{color: "#61E294"}}>Cat Lover</span>
+                                    <span style={{color: "#61E294"}}>Eagle Scout</span>
                                 </TextLoop>{" "}
                             </div>
                             <div>
@@ -76,10 +77,10 @@ function HomePage() {
                                             Backend infrastructure and machine learning.
                                         </div>
                                         <div>
-                                            Summer 2021
+                                            June 2021 - August 2021
                                         </div>
                                         <div className={"pl-5"}>
-                                            Backend infrastructure and machine learning.
+                                            - This summer, I am going to be a software engineering intern at Capital One. I am very excited to gain exposure to the fintech industry and see if I like working at larger companies.
                                         </div>
                                     </div>
                                 </Collapsible>
@@ -97,16 +98,16 @@ function HomePage() {
                                             December 2020 - Present
                                         </div>
                                         <div className={"pl-5"}>
-                                            Currently developing the backend in <span style={{fontStyle: "italic", color: ""}}>Node</span> and <span style={{fontStyle: "italic", color: ""}}>AWS</span>.
+                                            - Currently developing the backend in <span style={{fontStyle: "italic", color: ""}}>Node</span> and <span style={{fontStyle: "italic", color: ""}}>AWS</span>.
                                         </div>
                                         <div className={"pl-5"}>
-                                            Previously designed modified logistic regression classifier, deep neural network, and decision tree models for predicting interest rate for student loans.
+                                            - Previously designed modified logistic regression classifier, deep neural network, and decision tree models for predicting interest rate for student loans.
                                         </div>
                                         <div className={"pl-5"}>
-                                            Previously architected authentication and Plaid integration and implemented frontend pages utilizing <span style={{fontStyle: "italic", color: ""}}>React</span> and <span style={{fontStyle: "italic", color: ""}}>Firebase</span>.
+                                            - Previously architected authentication and Plaid integration and implemented frontend pages utilizing <span style={{fontStyle: "italic", color: ""}}>React</span> and <span style={{fontStyle: "italic", color: ""}}>Firebase</span>.
                                         </div>
                                         <div className={"pl-5"}>
-                                            Previously worked on V2 of iOS app in <span style={{fontStyle: "italic", color: ""}}>SwiftUI</span>, implementing <span style={{fontStyle: "italic", color: ""}}>Figma</span> designs and creating custom reusable components.
+                                            - Previously worked on V2 of iOS app in <span style={{fontStyle: "italic", color: ""}}>SwiftUI</span>, implementing <span style={{fontStyle: "italic", color: ""}}>Figma</span> designs and creating custom reusable components.
                                         </div>
                                     </div>
                                 </Collapsible>
@@ -121,13 +122,13 @@ function HomePage() {
                                             March 2020 - August 2020
                                         </div>
                                         <div className={"pl-5"}>
-                                            Designed and improved the Restvo MVP by working closely with the CTO to learn <span style={{fontStyle: "italic", color: ""}}>Node</span> and <span style={{fontStyle: "italic", color: ""}}>MongoDB</span>.
+                                            - Designed and improved the Restvo MVP by working closely with the CTO to learn <span style={{fontStyle: "italic", color: ""}}>Node</span> and <span style={{fontStyle: "italic", color: ""}}>MongoDB</span>.
                                         </div>
                                         <div className={"pl-5"}>
-                                            Implemented system logging and MongoDB aggregate pipelines for recording and displaying site metrics.
+                                            - Implemented system logging and MongoDB aggregate pipelines for recording and displaying site metrics.
                                         </div>
                                         <div className={"pl-5"}>
-                                            Wrote <span style={{fontStyle: "italic", color: ""}}>Mocha Chai</span> unit tests for backend calls for user metrics.
+                                            - Wrote <span style={{fontStyle: "italic", color: ""}}>Mocha Chai</span> unit tests for backend calls for user metrics.
                                         </div>
                                     </div>
                                 </Collapsible>
@@ -160,7 +161,7 @@ function HomePage() {
                                 <Collapsible trigger="Lorne is learning AWS.">
                                     <div className={"pl-3 mb-3 mt-2"} style={{background: "#61E294", borderRadius: "5px", padding: "5px"}}>
                                         <div>
-                                            DynamoDB, Amplify, Lambdas.
+                                            DynamoDB, Amplify, Lambda.
                                         </div>
                                     </div>
                                 </Collapsible>
@@ -183,16 +184,19 @@ function HomePage() {
                                 <Collapsible trigger="Lorne's favorite sub fields of machine learning include image classification, logistic regression, and decision tree models.">
                                     <div className={"pl-3 mb-3 mt-2"} style={{background: "#61E294", borderRadius: "5px", padding: "5px"}}>
                                         <div>
-                                            Duke CompSci 474: Used HIV DNA sequence data to predict interferon sensitivity levels and extract important sequence regions. Implemented cross validation and hyper tuning of tree models (decision trees, random forests, and gradient boosted) and analyzed both base pair and protein level sequences to provide a list of protein and offsets for guiding future lab experiments.
+                                            Duke CompSci 474
+                                        </div>
+                                        <div className={"pl-5"}>
+                                            - Used HIV DNA sequence data to predict interferon sensitivity levels and extract important sequence regions. Implemented cross validation and hyper tuning of tree models (decision trees, random forests, and gradient boosted) and analyzed both base pair and protein level sequences to provide a list of protein and offsets for guiding future lab experiments.
+                                        </div>
+                                        <div className={"pl-5"}>
+                                            - Competed in the IEEE Data Fusion Contest Track DSE to detect human settlements without electricity given 98 different channels of satellite data. Worked with FCN models, pretrained ResNet50 models, decision trees.
                                         </div>
                                         <div>
-                                            Duke CompSci 474: Competed in the IEEE Data Fusion Contest Track DSE to detect human settlements without electricity given 98 different channels of satellite data. Worked with FCN models, pretrained ResNet50 models, decision trees.
+                                            Custom modified logistic regression model
                                         </div>
                                         <div>
-                                            Custom modified logistic regression model.
-                                        </div>
-                                        <div>
-                                            Keras Cifar-10 app.
+                                            Keras Cifar-10 app
                                         </div>
                                     </div>
                                 </Collapsible>
@@ -210,20 +214,20 @@ function HomePage() {
                                 Current endeavors...
                             </div>
                             <div>
-                                Lorne is reading The Power of Now by Eckhart Tolle.
+                                Lorne is reading&nbsp;<a href={"https://en.wikipedia.org/wiki/The_Power_of_Now"} style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>The Power of Now</a>&nbsp;by Eckhart Tolle.
                             </div>
                             <div>
-                                Lorne is has started using Notion to organize and track his daily life.
+                                Lorne is has started using&nbsp;<a href={"https://www.notion.so/product?utm_source=google&utm_campaign=2075789710&utm_medium=80211061601&utm_content=500427479647&utm_term=notion&targetid=aud-840164194020:kwd-312974742&gclid=CjwKCAjwhYOFBhBkEiwASF3KGcBLaV_4tbYg5O2aQBVK4ezbf4WVz8jUzhWLirG9Xf0JBE1UIFOpUhoCp6cQAvD_BwE"} style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>Notion</a>&nbsp;to organize and track his daily life.
                             </div>
                             <div>
-                                Lorne got a new gym membership at Snap Fitness.
+                                Lorne got a new gym membership at&nbsp;<a href={"https://www.snapfitness.com/us/"} style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>Snap Fitness</a>.
                             </div>
                             <div>
-                                Lorne is listening to Ed Mylett on Spotify.
+                                Lorne is listening to&nbsp;<a href={"https://open.spotify.com/show/19TdDBlFkqh7uevYO0jFSW"} style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>Ed Mylett</a>&nbsp;on Spotify.
                             </div>
                         </div>
                         <div className={"mt-5"} style={{padding: "15px"}}>
-                            Developed with React, Bulma, AWS. Last updated&nbsp;<span style={{fontStyle: "italic", color: ""}}>05/19/2021</span>.
+                            Developed with React, Bulma, AWS. Last updated&nbsp;<span style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>05/19/2021</span>.
                         </div>
                     </div>
                 </div>
