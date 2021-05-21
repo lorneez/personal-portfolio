@@ -212,7 +212,7 @@ function HomePage() {
                             </div>
                         </div>
                         <div className={"mt-5"} style={{padding: "15px"}}>
-                            Developed with React, Bulma, AWS. Last updated&nbsp;<span style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>05/19/2021</span>.
+                            Developed with React, Bulma, AWS. Last updated&nbsp;<span style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>05/21/2021</span>.
                         </div>
                     </div>
                 </div>
