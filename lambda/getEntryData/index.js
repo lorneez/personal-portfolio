@@ -10,17 +10,36 @@ exports.handler = async (event, context) => {
     const ddb = new AWS.DynamoDB({ apiVersion: "2012-08-10" }); // instance of DynamoDB
     const documentClient = new AWS.DynamoDB.DocumentClient({ region: "us-west-1" }); // Document client to simulate more traditional JSON syntax
 
+    let responseBody = "";
+    let statusCode = 0;
+
+    const { id } = event.pathParameters;
+
+
+
     const params = {
         TableName: "Mini-Blog",
         Key: {
-            id: "12345"
+            id: id
         }
     };
 
     try {
         const data = await documentClient.get(params).promise();
-        console.log(data);
+        responseBody = JSON.stringify(data.Item);
+        statusCode = 200;
     } catch (err) {
-        console.log(err);
+        responseBody = `Unable to get Entry Data`;
+        statusCode = 403;
     }
+
+    const response = {
+        statusCode: statusCode,
+        headers: {
+            "testHeader": "test"
+        },
+        body: responseBody
+    }
+
+    return response;
 }
