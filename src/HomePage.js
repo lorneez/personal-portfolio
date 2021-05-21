@@ -181,7 +181,7 @@ function HomePage() {
                                 <Collapsible trigger="Lorne is learning AWS.">
                                     <div className={"pl-3 mb-3 mt-2"} style={{background: "#61E294", borderRadius: "5px", padding: "5px"}}>
                                         <div>
-                                            Learning: DynamoDB, Lambda
+                                            Learning: DynamoDB, Lambda, API Gateway
                                         </div>
                                         <div>
                                             Using: Route 53, Amplify
