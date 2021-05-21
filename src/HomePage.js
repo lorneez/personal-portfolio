@@ -202,7 +202,7 @@ function HomePage() {
                                 Lorne is reading&nbsp;<a href={"https://en.wikipedia.org/wiki/The_Power_of_Now"} style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>The Power of Now</a>&nbsp;by Eckhart Tolle.
                             </div>
                             <div>
-                                Lorne is has started using&nbsp;<a href={"https://www.notion.so/product?utm_source=google&utm_campaign=2075789710&utm_medium=80211061601&utm_content=500427479647&utm_term=notion&targetid=aud-840164194020:kwd-312974742&gclid=CjwKCAjwhYOFBhBkEiwASF3KGcBLaV_4tbYg5O2aQBVK4ezbf4WVz8jUzhWLirG9Xf0JBE1UIFOpUhoCp6cQAvD_BwE"} style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>Notion</a>&nbsp;to organize and track his daily life.
+                                Lorne has started using&nbsp;<a href={"https://www.notion.so/product?utm_source=google&utm_campaign=2075789710&utm_medium=80211061601&utm_content=500427479647&utm_term=notion&targetid=aud-840164194020:kwd-312974742&gclid=CjwKCAjwhYOFBhBkEiwASF3KGcBLaV_4tbYg5O2aQBVK4ezbf4WVz8jUzhWLirG9Xf0JBE1UIFOpUhoCp6cQAvD_BwE"} style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>Notion</a>&nbsp;to organize and track his daily life.
                             </div>
                             <div>
                                 Lorne got a new gym membership at&nbsp;<a href={"https://www.snapfitness.com/us/"} style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>Snap Fitness</a>.
