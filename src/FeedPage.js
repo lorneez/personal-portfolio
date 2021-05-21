@@ -7,7 +7,8 @@ import EntryComponent from "./EntryComponent";
 
 function FeedPage() {
 
-    const [entries, setEntries] = useState([])
+    const [entries, setEntries] = useState([]);
+    // const [maxEntry, setMaxEntry] = useState(0);
 
     useEffect(() => {
         axios.get(`https://qqt2r1ziie.execute-api.us-west-1.amazonaws.com/prod/entry`)
@@ -15,6 +16,15 @@ function FeedPage() {
                 console.log(res.data)
                 const sortedEntries = res.data.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
                 setEntries(res.data)
+                // let currMax = 0;
+                // for(let i = 0; i<res.data.length; i++) {
+                //     let entryNum = parseInt(res.data[i].id);
+                //     if(currMax < entryNum) {
+                //         console.log("set")
+                //         currMax = entryNum
+                //     }
+                // }
+                // setMaxEntry(currMax);
             })
     }, []);
 
@@ -50,6 +60,7 @@ function FeedPage() {
                                     <EntryComponent title={entry.title} description={entry.description} author={entry.author} date={entry.date}/>
                                 ))}
                             </div>
+                            <button className="button" style={{background: "#61E294"}} onClick={() => window.location = "/feed/create"}>New Post</button>
                         </div>
                     </div>
                 </div>
