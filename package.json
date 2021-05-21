@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "aws-sdk": "^2.911.0",
     "react-router-dom": "^5.2.0"
   }
 }
