@@ -1,7 +1,9 @@
 import React from "react";
 
 function EntryComponent(props) {
-    const hours = Math.ceil((Date.now() - Date.parse(props.date)) / (1000 * 60 * 60));
+    const days = Math.floor((Date.now() - Date.parse(props.date)) / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((Date.now() - Date.parse(props.date)) / (1000 * 60 * 60) % 24);
+    const minutes = Math.floor((Date.now() - Date.parse(props.date)) / (1000 * 60) % 60);
     return (
         <div
             className={"my-3"}
@@ -18,7 +20,7 @@ function EntryComponent(props) {
                     {props.author}
                 </div>
                 <div style={{paddingRight: "5px"}}>
-                    {hours} {hours === 1 ? "hour" : "hours"} ago
+                    {days} {days === 1 ? "day" : "days"}, {hours} {hours === 1 ? "hour" : "hours"}, {minutes} {minutes === 1 ? "minute" : "minutes"} ago
                 </div>
             </div>
             <div style={{margin: "10px", padding: "10px", borderStyle: "solid", borderRadius: "5px", borderWidth: "1px", background: "white"}}>
