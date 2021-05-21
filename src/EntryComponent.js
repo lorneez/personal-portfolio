@@ -1,6 +1,7 @@
 import React from "react";
 
 function EntryComponent(props) {
+    const hours = Math.ceil((Date.now() - Date.parse(props.date)) / (1000 * 60 * 60));
     return (
         <div
             className={"my-3"}
@@ -17,7 +18,7 @@ function EntryComponent(props) {
                     {props.author}
                 </div>
                 <div style={{paddingRight: "5px"}}>
-                    {Math.ceil((Date.now() - Date.parse(props.date)) / (1000 * 60)) } minutes ago
+                    {hours} {hours === 1 ? "hour" : "hours"} ago
                 </div>
             </div>
             <div style={{margin: "10px", padding: "10px", borderStyle: "solid", borderRadius: "5px", borderWidth: "1px", background: "white"}}>
