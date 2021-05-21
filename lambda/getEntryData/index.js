@@ -15,8 +15,6 @@ exports.handler = async (event, context) => {
 
     const { id } = event.pathParameters;
 
-
-
     const params = {
         TableName: "Mini-Blog",
         Key: {
