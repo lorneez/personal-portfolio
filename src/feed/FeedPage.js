@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
-import ProfileComponent from "./ProfileComponent";
+import "../App.css";
+import ProfileComponent from "../home/ProfileComponent";
 import axios from 'axios';
 import EntryComponent from "./EntryComponent";
 

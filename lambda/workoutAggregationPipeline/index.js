@@ -11,6 +11,10 @@ exports.handler = async (event, context) => {
     let statusCode = 0;
     let scanResults = [];
 
+    const LogType = event["queryStringParameters"]['LogType'];
+    const String_1 = event["queryStringParameters"]['String_1'];
+    const Int_1 = event["queryStringParameters"]['Int_1'];
+
     const params = {
         TableName: "Fitness",
     };
@@ -19,6 +23,7 @@ exports.handler = async (event, context) => {
         const data = await documentClient.scan(params).promise();
         data.Items.forEach((item) => scanResults.push(item));
         responseBody = JSON.stringify(scanResults);
+
         statusCode = 200;
 
         // TODO: insert filtering code

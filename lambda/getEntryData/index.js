@@ -13,8 +13,6 @@ exports.handler = async (event, context) => {
     let responseBody = "";
     let statusCode = 0;
 
-    const { id } = event.pathParameters;
-
     const params = {
         TableName: "Mini-Blog",
         Key: {

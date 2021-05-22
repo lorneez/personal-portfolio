@@ -1,6 +1,6 @@
 import React from "react";
 import Collapsible from 'react-collapsible';
-import "./App.css";
+import "../App.css";
 import ProfileComponent from "./ProfileComponent";
 
 function HomePage() {

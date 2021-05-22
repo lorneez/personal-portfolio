@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ProfileComponent from "./ProfileComponent";
+import ProfileComponent from "../home/ProfileComponent";
 import axios from "axios";
 
 function MakeEntryPage() {
