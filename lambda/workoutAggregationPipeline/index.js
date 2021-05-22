@@ -58,7 +58,19 @@ exports.handler = async (event, context) => {
             }
         }
 
+        // Date range: Start End
+        // This has to be a Day range (Monday - Thursday). Not by hours or other durations
+        // An alternative option is to make the date range some type of "#" + "duration" combination
+        // Example: past 3 weeks.
+
+        // A big issue with this entire set up  is that we could have date ranges that are too short and durations that are too long
+
         // TODO: insert bucketing code
+        // Duration: Individual, Days, Weeks, Months, Years
+        // Set Up
+        // Based on LogType (Gym, Meal) we will track Minutes or Protein
+        // Based on date range and duration, we can compute number of buckets needed.
+        // Then we can iterate through the logs, and sort them... O(n) time I guess.
 
         responseBody = JSON.stringify(scanResults);
     } catch (err) {
