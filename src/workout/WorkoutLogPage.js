@@ -57,9 +57,13 @@ function WorkoutLogPage() {
                 case "Gym":
                     return (
                         <select className={"select"} value={String_1} onChange={(e) => setString_1(e.target.value)}>
-                            <option value="">Body Part</option>
+                            <option value="">Workout</option>
                             <option value="Chest">Chest</option>
                             <option value="Back">Back</option>
+                            <option value="Legs">Legs</option>
+                            <option value="Biceps">Biceps</option>
+                            <option value="Triceps">Triceps</option>
+                            <option value="Abs">Abs</option>
                         </select>
                     )
                 case "Meal":
@@ -135,10 +139,10 @@ function WorkoutLogPage() {
                                             {workout.LogType}
                                         </div>
                                         <div style={{paddingLeft: "5px"}}>
-                                            {workout.LogType === "Gym" ? "Body part focused:" : "Meal of the day:"} {workout.String_1}
+                                            {workout.LogType === "Gym" ? "Workout:" : "Meal of the day:"} {workout.String_1}
                                         </div>
                                         <div style={{paddingLeft: "5px"}}>
-                                            {workout.LogType === "Gym" ? "Hours worked out:" : "Grams of protein:"} {workout.Int_1}
+                                            {workout.LogType === "Gym" ? "Minutes:" : "Grams of protein:"} {workout.Int_1}
                                         </div>
                                     </div>
                                 ))}

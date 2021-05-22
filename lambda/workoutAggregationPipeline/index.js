@@ -12,8 +12,6 @@ exports.handler = async (event, context) => {
     let scanResults = [];
 
     const LogType = event["queryStringParameters"]['LogType'];
-    const String_1 = event["queryStringParameters"]['String_1'];
-    const Int_1 = event["queryStringParameters"]['Int_1'];
 
     const params = {
         TableName: "Fitness",
@@ -22,11 +20,9 @@ exports.handler = async (event, context) => {
     try {
         const data = await documentClient.scan(params).promise();
         data.Items.forEach((item) => scanResults.push(item));
-
         statusCode = 200;
 
         // TODO: insert filtering code
-
         // Log Type filter
         if(LogType !== "") {
             const tempArr = scanResults.filter((workout) => {
@@ -34,28 +30,37 @@ exports.handler = async (event, context) => {
             })
             scanResults = tempArr;
         }
-
-        // String 1 filter
-        if(String_1 !== "") {
-            const tempArr = scanResults.filter((workout) => {
-                return workout.String_1 === String_1;
-            })
-            scanResults = tempArr;
+        // GYM: Types contains, Location
+        if(LogType === "Gym") {
+            const Location = event["queryStringParameters"]['Location'];
+            if(Location !== "") {
+                const tempArr = scanResults.filter((exercise) => {
+                    return exercise.Location === Location;
+                })
+                scanResults = tempArr;
+            }
+            const Type = event["queryStringParameters"]['Type'];
+            if(Type !== "") {
+                const tempArr = scanResults.filter((exercise) => {
+                    return exercise.Types.includes(Type);
+                })
+                scanResults = tempArr;
+            }
         }
-
-        // Int 1 filter
-        if(Int_1 !== "") {
-            const tempArr = scanResults.filter((workout) => {
-                return workout.Int_1 === Int_1;
-            })
-            scanResults = tempArr;
+        // MEAL: Type
+        if(LogType === "Meal") {
+            const Type = event["queryStringParameters"]['Type'];
+            if(Type !== "") {
+                const tempArr = scanResults.filter((meal) => {
+                    return meal.Type === Type;
+                })
+                scanResults = tempArr;
+            }
         }
 
         // TODO: insert bucketing code
 
         responseBody = JSON.stringify(scanResults);
-
-
     } catch (err) {
         responseBody = JSON.stringify(err);
         statusCode = 403;
