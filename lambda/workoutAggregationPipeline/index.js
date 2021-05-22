@@ -22,11 +22,38 @@ exports.handler = async (event, context) => {
     try {
         const data = await documentClient.scan(params).promise();
         data.Items.forEach((item) => scanResults.push(item));
-        responseBody = JSON.stringify(scanResults);
 
         statusCode = 200;
 
         // TODO: insert filtering code
+
+        // Log Type filter
+        if(LogType !== "") {
+            const tempArr = scanResults.filter((workout) => {
+                return workout.LogType === LogType;
+            })
+            scanResults = tempArr;
+        }
+
+        // String 1 filter
+        if(String_1 !== "") {
+            const tempArr = scanResults.filter((workout) => {
+                return workout.String_1 === String_1;
+            })
+            scanResults = tempArr;
+        }
+
+        // Int 1 filter
+        if(Int_1 !== "") {
+            const tempArr = scanResults.filter((workout) => {
+                return workout.Int_1 === Int_1;
+            })
+            scanResults = tempArr;
+        }
+
+        // TODO: insert bucketing code
+
+        responseBody = JSON.stringify(scanResults);
 
 
     } catch (err) {

@@ -7,11 +7,16 @@ import axios from 'axios';
 function WorkoutLogPage() {
 
     const [workouts, setWorkouts] = useState([]);
+    const [LogType, setLogType] = useState("");
+    const [String_1, setString_1] = useState("");
+    const [Int_1, setInt_1] = useState("");
 
     useEffect(() => {
-        axios.get(`https://j0zcpa8hsk.execute-api.us-west-1.amazonaws.com/prod/workout?LogType=` + "Gym" + `&String_1=` + "hi" + `&Int_1=` + "hi")
+        axios.get(`https://j0zcpa8hsk.execute-api.us-west-1.amazonaws.com/prod/workout?LogType=` + "Meal" + `&String_1=` + "" + `&Int_1=` + "")
             .then(res => {
                 console.log(res.data)
+
+                // TODO: Set up sorting
                 // const sortedWorkouts = res.data.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
                 setWorkouts(res.data)
 
