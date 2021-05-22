@@ -35,14 +35,14 @@ exports.handler = async (event, context) => {
             const Location = event["queryStringParameters"]['Location'];
             if(Location !== "") {
                 const tempArr = scanResults.filter((exercise) => {
-                    return exercise.Location === Location;
+                    return exercise.Gym.Location === Location;
                 })
                 scanResults = tempArr;
             }
             const Type = event["queryStringParameters"]['Type'];
             if(Type !== "") {
                 const tempArr = scanResults.filter((exercise) => {
-                    return exercise.Types.includes(Type);
+                    return exercise.Gym.Types.includes(Type);
                 })
                 scanResults = tempArr;
             }
@@ -52,7 +52,7 @@ exports.handler = async (event, context) => {
             const Type = event["queryStringParameters"]['Type'];
             if(Type !== "") {
                 const tempArr = scanResults.filter((meal) => {
-                    return meal.Type === Type;
+                    return meal.Meal.Type === Type;
                 })
                 scanResults = tempArr;
             }

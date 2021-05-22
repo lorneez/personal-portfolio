@@ -2,27 +2,46 @@ import React, { useEffect, useState } from "react";
 import "../App.css";
 import ProfileComponent from "../home/ProfileComponent";
 import axios from 'axios';
+import FitnessEntryComponent from "./FitnessEntryComponent";
 
 
 function WorkoutLogPage() {
 
     const [workouts, setWorkouts] = useState([]);
+
     const [Database, setDatabase] = useState("");
     const [LogType, setLogType] = useState("");
-    const [String_1, setString_1] = useState("");
-    const [Int_1, setInt_1] = useState("");
+    const [GymLocation, setGymLocation] = useState("");
+    const [GymType, setGymType] = useState("");
+    const [MealType, setMealType] = useState("");
+
+    function generateFitnessAPICall() {
+        if(LogType === "") {
+            return `https://j0zcpa8hsk.execute-api.us-west-1.amazonaws.com/prod/workout?LogType=`;
+        }
+        else {
+            if(LogType === "Gym") {
+                return `https://j0zcpa8hsk.execute-api.us-west-1.amazonaws.com/prod/workout?LogType=Gym&Type=` + GymType + "&Location=" + GymLocation;
+            }
+            else if(LogType === "Meal") {
+                return `https://j0zcpa8hsk.execute-api.us-west-1.amazonaws.com/prod/workout?LogType=Meal&Type=` + MealType;
+            }
+        }
+    }
 
     useEffect(() => {
-        axios.get(`https://j0zcpa8hsk.execute-api.us-west-1.amazonaws.com/prod/workout?LogType=` + LogType + `&String_1=` + String_1 + `&Int_1=` + Int_1)
-            .then(res => {
-                console.log(res.data)
+        if(Database === "Fitness") {
+            axios.get(generateFitnessAPICall())
+                .then(res => {
+                    console.log(res.data)
 
-                // TODO: Set up sorting
-                // const sortedWorkouts = res.data.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
-                setWorkouts(res.data)
+                    // TODO: Set up sorting
+                    const sortedWorkouts = res.data.sort((a, b) => Date.parse(b.Date) - Date.parse(a.Date))
+                    setWorkouts(res.data)
 
-            })
-    }, [LogType, String_1]);
+                })
+        }
+    }, [Database, LogType, GymLocation, GymType, MealType]);
 
     function renderTypeSelection() {
         if(Database === "") {
@@ -34,8 +53,9 @@ function WorkoutLogPage() {
                     return (
                         <select className={"select"} value={LogType} onChange={(e) => {
                             setLogType(e.target.value);
-                            setString_1("");
-                            setInt_1("");
+                            setGymType("");
+                            setGymLocation("");
+                            setMealType("");
                         }}>
                             <option value="">Log Type</option>
                             <option value="Gym">Gym</option>
@@ -56,24 +76,37 @@ function WorkoutLogPage() {
             switch(LogType) {
                 case "Gym":
                     return (
-                        <select className={"select"} value={String_1} onChange={(e) => setString_1(e.target.value)}>
-                            <option value="">Workout</option>
-                            <option value="Chest">Chest</option>
-                            <option value="Back">Back</option>
-                            <option value="Legs">Legs</option>
-                            <option value="Biceps">Biceps</option>
-                            <option value="Triceps">Triceps</option>
-                            <option value="Abs">Abs</option>
-                        </select>
+                        <div style={{display: "flex", flexDirection: "row"}}>
+                            <div style={{padding: "10px"}}>
+                                <select className={"select"} value={GymType} onChange={(e) => setGymType(e.target.value)}>
+                                    <option value="">Workout</option>
+                                    <option value="Chest">Chest</option>
+                                    <option value="Back">Back</option>
+                                    <option value="Legs">Legs</option>
+                                    <option value="Biceps">Biceps</option>
+                                    <option value="Triceps">Triceps</option>
+                                    <option value="Abs">Abs</option>
+                                </select>
+                            </div>
+                            <div style={{padding: "10px"}}>
+                                <select className={"select"} value={GymLocation} onChange={(e) => setGymLocation(e.target.value)}>
+                                    <option value="">Location</option>
+                                    <option value="Snap Fitness">Snap Fitness</option>
+                                    <option value="Home">Home</option>
+                                </select>
+                            </div>
+                        </div>
                     )
                 case "Meal":
                     return (
-                        <select className={"select"} value={String_1} onChange={(e) => setString_1(e.target.value)}>
-                            <option value="">Meal of the day</option>
-                            <option value="Breakfast">Breakfast</option>
-                            <option value="Lunch">Lunch</option>
-                            <option value="Dinner">Dinner</option>
-                        </select>
+                        <div style={{padding: "10px"}}>
+                            <select className={"select"} value={MealType} onChange={(e) => setMealType(e.target.value)}>
+                                <option value="">Meal of the day</option>
+                                <option value="Breakfast">Breakfast</option>
+                                <option value="Lunch">Lunch</option>
+                                <option value="Dinner">Dinner</option>
+                            </select>
+                        </div>
                     )
                 default:
                     return <div></div>
@@ -116,9 +149,11 @@ function WorkoutLogPage() {
                                     <div style={{padding: "10px"}}>
                                         <select className={"select"} value={Database} onChange={(e) => {
                                             setDatabase(e.target.value);
-                                            setString_1("");
-                                            setInt_1("");
+                                            setWorkouts([]);
                                             setLogType("");
+                                            setGymType("");
+                                            setGymLocation("");
+                                            setMealType("");
                                         }}>
                                             <option value="">Database</option>
                                             <option value="Fitness">Fitness</option>
@@ -128,23 +163,13 @@ function WorkoutLogPage() {
                                         {renderTypeSelection()}
                                     </div>
                                 </div>
-                                <div style={{padding: "10px"}}>
+                                <div>
                                     {renderString_1Selection()}
                                 </div>
                             </div>
                             <div>
                                 {workouts.map(workout => (
-                                    <div style={{display: "flex", flexDirection: "row"}}>
-                                        <div>
-                                            {workout.LogType}
-                                        </div>
-                                        <div style={{paddingLeft: "5px"}}>
-                                            {workout.LogType === "Gym" ? "Workout:" : "Meal of the day:"} {workout.String_1}
-                                        </div>
-                                        <div style={{paddingLeft: "5px"}}>
-                                            {workout.LogType === "Gym" ? "Minutes:" : "Grams of protein:"} {workout.Int_1}
-                                        </div>
-                                    </div>
+                                    <FitnessEntryComponent LogType={workout.LogType} Gym={workout.Gym} Meal={workout.Meal} Date={workout.Date} Description={workout.Description}/>
                                 ))}
                             </div>
                         </div>
