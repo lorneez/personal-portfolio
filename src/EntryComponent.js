@@ -20,7 +20,7 @@ function EntryComponent(props) {
                     {props.author}
                 </div>
                 <div style={{paddingRight: "5px"}}>
-                    {days} {days === 1 ? "day" : "days"}, {hours} {hours === 1 ? "hour" : "hours"}, {minutes} {minutes === 1 ? "minute" : "minutes"} ago
+                    {days} {days === 1 ? "day" : "days"}, {hours} {hours === 1 ? "hour" : "hours"}, and {minutes} {minutes === 1 ? "minute" : "minutes"} ago
                 </div>
             </div>
             <div style={{margin: "10px", padding: "10px", borderStyle: "solid", borderRadius: "5px", borderWidth: "1px", background: "white"}}>
