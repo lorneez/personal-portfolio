@@ -139,7 +139,7 @@ function WorkoutLogPage() {
                             }}
                         >
                             <div className={"title"}>
-                                Workout Logs
+                                Fitness Logs
                             </div>
                             <div
                                 className={"my-3"}
