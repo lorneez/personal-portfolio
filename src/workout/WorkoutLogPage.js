@@ -240,8 +240,8 @@ function WorkoutLogPage() {
                             interpolate={"none"}
                             xLabel={"DAYS"}
                             yLabel={LogType === "Gym" ? "MINUTES IN THE GYM" : "GRAMS OF PROTEIN"}
-                            width={400}
-                            height={400}
+                            width={300}
+                            height={300}
                             data={data}
                         />
                     </div>
