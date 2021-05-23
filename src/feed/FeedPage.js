@@ -55,18 +55,18 @@ function FeedPage() {
                             <div className={"title"}>
                                 Feed
                             </div>
+                            <button className="button" style={{background: "#61E294"}} onClick={() => window.location = "/feed/create"}>Send me a Message!!!</button>
                             <div>
                                 {entries.map(entry => (
                                     <EntryComponent title={entry.title} description={entry.description} author={entry.author} date={entry.date}/>
                                 ))}
                             </div>
-                            <button className="button" style={{background: "#61E294"}} onClick={() => window.location = "/feed/create"}>New Post</button>
+                        </div>
+                        <div className={"mt-5"} style={{padding: "15px"}}>
+                            Developed with React, Bulma, AWS. Last updated&nbsp;<span style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>05/22/2021</span>.
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className={"mt-5"} style={{padding: "15px"}}>
-                Developed with React, Bulma, AWS. Last updated&nbsp;<span style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>05/22/2021</span>.
             </div>
         </div>
     )
