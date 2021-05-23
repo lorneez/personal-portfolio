@@ -59,18 +59,19 @@ function WorkoutLogPage() {
                     console.log(res.data);
                     setWorkouts(res.data.results);
                     let tempBuckets = [];
-                    tempBuckets.push({
-                        x: res.data.buckets.length,
-                        y: 0
-                    })
+
                     for(let i=0; i<res.data.buckets.length; i++) {
                         tempBuckets.push(
                             {
-                                x: res.data.buckets.length - i - 1,
+                                x: res.data.buckets.length - i,
                                 y: res.data.buckets[i]
                             }
                         )
                     }
+                    tempBuckets.push({
+                        x: 0,
+                        y: 0
+                    })
                     setBuckets(tempBuckets);
                 })
         }
@@ -335,6 +336,9 @@ function WorkoutLogPage() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={"mt-5"} style={{padding: "15px"}}>
+                Developed with React, Bulma, AWS. Last updated&nbsp;<span style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>05/22/2021</span>.
             </div>
         </div>
     )
