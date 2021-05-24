@@ -53,11 +53,11 @@ function CreateFitnessLogPage() {
 
     function handleSubmit() {
         postFitnessLog();
-        // setIsLoading(true); // and yes as you can see this loading animation is purely for the user experience. No functionality at all....
-        // setTimeout(function(){
-        //     setIsLoading(false);
-        //     window.location = "/workout" // ..... hmm how can we restore the search parameters
-        // }, 2000);
+        setIsLoading(true); // and yes as you can see this loading animation is purely for the user experience. No functionality at all....
+        setTimeout(function(){
+            setIsLoading(false);
+            window.location = "/workout" // ..... hmm how can we restore the search parameters
+        }, 2000);
     }
 
     function updateGymTypes(value) {
