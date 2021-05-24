@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ProfileComponent from "../home/ProfileComponent";
 import axios from "axios";
 
-function MakeEntryPage() {
+function CreateEntryPage() {
     const [name, setName] = useState("");
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -91,4 +91,4 @@ function MakeEntryPage() {
     )
 }
 
-export default MakeEntryPage;
+export default CreateEntryPage;

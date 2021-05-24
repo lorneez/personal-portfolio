@@ -199,6 +199,33 @@ function WorkoutLogPage() {
         }
     }
 
+    function renderCreateButton() {
+        if(Database === "" || LogType === "") {
+            return <div></div>
+            // TODO: Figure out if ^^^^^^^ is the best practice
+        }
+        else {
+            let message;
+            switch(LogType) { // I am using a switch statement in case I have more types of logs in the future. This could just be a simple if statement or a "?" statement
+                case "Gym":
+                    message = "Log a new workout session";
+                    break;
+                case "Meal":
+                    message = "Log a new meal";
+                    break;
+                default:
+                    message = "New fitness log"
+                    break;
+            }
+
+            return (
+                <div>
+                    <button className="button" style={{background: "#61E294"}} onClick={() => window.location = "/workout/create/" + LogType}>{message}</button>
+                </div>
+            )
+        }
+    }
+
     function renderWorkouts() {
         if(Database === "" || LogType === "") {
             return <div></div>
@@ -326,6 +353,9 @@ function WorkoutLogPage() {
                                 <div>
                                     {renderBucketSelection()}
                                 </div>
+                            </div>
+                            <div className={"pb-3"}>
+                                {renderCreateButton()}
                             </div>
                             <div>
                                 {renderBucketGraph()}
