@@ -9,22 +9,22 @@ function CreateFitnessLogPage() {
     const [isLoading, setIsLoading] = useState(false);
     const [description, setDescription] = useState("");
     const [gym, setGym] = useState({
-        Duration: null,
+        Duration: 0,
         Location: "",
         Types: []
     });
     const [meal, setMeal] = useState({
-        Protein: null,
+        Protein: 0,
         Type: ""
     });
 
     function validate() {
         let validateObject;
         if(type === "Gym") {
-            validateObject = gym.Duration !== null && gym.Location !== "" && gym.Types.length !== 0;
+            validateObject = gym.Location !== "" && gym.Types.length !== 0;
         }
         else if(type === "Meal") {
-            validateObject = meal.Protein !== null && meal.Type !== "";
+            validateObject = meal.Type !== "";
         }
         return description.length !== 0 && validateObject;
     }
