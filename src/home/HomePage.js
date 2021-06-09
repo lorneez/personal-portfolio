@@ -70,13 +70,13 @@ function HomePage() {
                                     <Collapsible trigger={getString(1)} onOpening={() => setOpen1(!open1)} onClosing={() => setOpen1(!open1)}>
                                         <div className={"pl-3 mb-3 mt-2"} style={{background: "#61E294", borderRadius: "5px", padding: "5px"}}>
                                             <div>
-                                                Backend infrastructure and machine learning.
+                                                Backend, AWS
                                             </div>
                                             <div>
                                                 June 2021 - August 2021
                                             </div>
                                             <div className={"pl-5"}>
-                                                - This summer, I am going to be a software engineering intern at Capital One. I am very excited to gain exposure to the fintech industry and see if I like working at larger companies.
+                                                - Card Tech
                                             </div>
                                         </div>
                                     </Collapsible>
@@ -277,7 +277,7 @@ function HomePage() {
                             </FadeIn>
                         </div>
                         <div className={"mt-5"} style={{padding: "15px"}}>
-                            Developed with React, Bulma, AWS. Last updated&nbsp;<span style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>05/30/2021</span>.
+                            Developed with React, Bulma, AWS. Last updated&nbsp;<span style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>06/09/2021</span>.
                         </div>
                     </div>
                 </div>

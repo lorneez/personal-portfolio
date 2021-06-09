@@ -11,10 +11,10 @@ function App() {
       <BrowserRouter>
           <Switch>
               <Route path="/" exact component={HomePage} />
-              <Route path="/feed" exact component={FeedPage} />
-              <Route path="/feed/create" exact component={CreateEntryPage} />
-              <Route path="/workout" exact component={WorkoutLogPage} />
-              <Route path="/workout/create/:type" exact component={CreateFitnessLogPage} />
+              {/*<Route path="/feed" exact component={FeedPage} />*/}
+              {/*<Route path="/feed/create" exact component={CreateEntryPage} />*/}
+              {/*<Route path="/workout" exact component={WorkoutLogPage} />*/}
+              {/*<Route path="/workout/create/:type" exact component={CreateFitnessLogPage} />*/}
         </Switch>
       </BrowserRouter>
   );
