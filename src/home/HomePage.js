@@ -93,10 +93,10 @@ function HomePage() {
                                                 Website, Mobile, ML Teams
                                             </div>
                                             <div>
-                                                December 2020 - Present
+                                                December 2020 - June 2021
                                             </div>
                                             <div className={"pl-5"}>
-                                                - Currently developing the backend in <span style={{fontStyle: "italic", color: ""}}>Node</span> and <span style={{fontStyle: "italic", color: ""}}>AWS</span>.
+                                                - Implemented consumer credit pull and XML parsing in <span style={{fontStyle: "italic", color: ""}}>Java</span> Lambda/DynamoDB <span style={{fontStyle: "italic", color: ""}}>Node</span> integration using <span style={{fontStyle: "italic", color: ""}}>JavaScript</span> to provide a scalable and dynamic consumer credit model for all integrated lending partners.
                                             </div>
                                             <div className={"pl-5"}>
                                                 - Previously designed modified logistic regression classifier, deep neural network, and decision tree models for predicting interest rate for student loans.
@@ -242,42 +242,8 @@ function HomePage() {
                                 </div>
                             </FadeIn>
                         </div>
-                        <div
-                            className={"mt-5"}
-                            style={{
-                                background: "",
-                                padding: "15px",
-                                borderRadius: "10px"
-                            }}
-                        >
-                            <FadeIn>
-                                <div className={"title"}>
-                                    Current endeavors...
-                                </div>
-                            </FadeIn>
-                            <FadeIn>
-                                <div>
-                                    Lorne is reading&nbsp;<a href={"https://en.wikipedia.org/wiki/The_Power_of_Now"} style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>The Power of Now</a>&nbsp;by Eckhart Tolle.
-                                </div>
-                            </FadeIn>
-                            <FadeIn>
-                                <div>
-                                    Lorne has started using&nbsp;<a href={"https://www.notion.so/product?utm_source=google&utm_campaign=2075789710&utm_medium=80211061601&utm_content=500427479647&utm_term=notion&targetid=aud-840164194020:kwd-312974742&gclid=CjwKCAjwhYOFBhBkEiwASF3KGcBLaV_4tbYg5O2aQBVK4ezbf4WVz8jUzhWLirG9Xf0JBE1UIFOpUhoCp6cQAvD_BwE"} style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>Notion</a>&nbsp;to organize and track his daily life.
-                                </div>
-                            </FadeIn>
-                            <FadeIn>
-                                <div>
-                                    Lorne got a new gym membership at&nbsp;<a href={"https://www.snapfitness.com/us/"} style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>Snap Fitness</a>.
-                                </div>
-                            </FadeIn>
-                            <FadeIn>
-                                <div>
-                                    Lorne is listening to&nbsp;<a href={"https://open.spotify.com/show/19TdDBlFkqh7uevYO0jFSW"} style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>Ed Mylett</a>&nbsp;on Spotify.
-                                </div>
-                            </FadeIn>
-                        </div>
                         <div className={"mt-5"} style={{padding: "15px"}}>
-                            Developed with React, Bulma, AWS. Last updated&nbsp;<span style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>06/09/2021</span>.
+                            Developed with React, Bulma, AWS. Last updated&nbsp;<span style={{fontWeight: "bold", fontStyle: "", color: "#61E294"}}>08/01/2021</span>.
                         </div>
                     </div>
                 </div>
