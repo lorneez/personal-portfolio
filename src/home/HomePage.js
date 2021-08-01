@@ -76,7 +76,10 @@ function HomePage() {
                                                 June 2021 - August 2021
                                             </div>
                                             <div className={"pl-5"}>
-                                                - Card Tech
+                                                - Mobile and backend development on the Capital One Credit Wise service. Utilized <span style={{fontStyle: "italic", color: ""}}>Python/AWS/Jenkin</span> to create a microservice for calling the Credit Wise API and displaying the service using the Dynamic Tile Engine.
+                                            </div>
+                                            <div className={"pl-5"}>
+                                                - Utilized <span style={{fontStyle: "italic", color: ""}}>Charles</span> for mapping local API requests and ran unit, acceptance, and linter tests.
                                             </div>
                                         </div>
                                     </Collapsible>
@@ -96,7 +99,7 @@ function HomePage() {
                                                 December 2020 - June 2021
                                             </div>
                                             <div className={"pl-5"}>
-                                                - Implemented consumer credit pull and XML parsing in <span style={{fontStyle: "italic", color: ""}}>Java</span> Lambda/DynamoDB <span style={{fontStyle: "italic", color: ""}}>Node</span> integration using <span style={{fontStyle: "italic", color: ""}}>JavaScript</span> to provide a scalable and dynamic consumer credit model for all integrated lending partners.
+                                                - Implemented consumer credit pull and XML parsing in <span style={{fontStyle: "italic", color: ""}}>Java</span> and <span style={{fontStyle: "italic", color: ""}}>Lambda/DynamoDB</span> integration using <span style={{fontStyle: "italic", color: ""}}>JavaScript</span> to provide a scalable and dynamic consumer credit model for all integrated lending partners.
                                             </div>
                                             <div className={"pl-5"}>
                                                 - Previously designed modified logistic regression classifier, deep neural network, and decision tree models for predicting interest rate for student loans.
