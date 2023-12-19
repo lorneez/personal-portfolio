@@ -21,12 +21,12 @@ function HomePage() {
           : "⬇️ Sparrow Labs: Software Engineer";
       case 2:
         return open2
-          ? "⬆️ Sparrow Labs: Software Engineering Intern"
-          : "⬇️ Sparrow Labs: Software Engineering Intern";
-      case 3:
-        return open3
           ? "⬆️ Capital One: Software Engineer Intern"
           : "⬇️ Capital One: Software Engineer Intern";
+      case 3:
+        return open3
+          ? "⬆️ Sparrow Labs: Software Engineering Intern"
+          : "⬇️ Sparrow Labs: Software Engineering Intern";
       case 4:
         return open4
           ? "⬆️ Lorne is passionate about blockchain technology."
