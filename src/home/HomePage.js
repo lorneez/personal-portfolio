@@ -21,8 +21,8 @@ function HomePage() {
           : "⬇️ Sparrow Labs: Software Engineer";
       case 2:
         return open2
-          ? "⬆️ Sparrow Lending: Software Engineering Intern"
-          : "⬇️ Sparrow Lending: Software Engineering Intern";
+          ? "⬆️ Sparrow Labs: Software Engineering Intern"
+          : "⬇️ Sparrow Labs: Software Engineering Intern";
       case 3:
         return open3
           ? "⬆️ Capital One: Software Engineer Intern"
