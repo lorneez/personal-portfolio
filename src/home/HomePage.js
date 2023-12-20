@@ -83,7 +83,7 @@ function HomePage() {
                       <div>Backend, AWS</div>
                       <div>June 2022 - Present</div>
                       <div className={"pl-5"}>
-                        - Designed and built out a data anlytics platform
+                        - Designed and built out a data analytics platform
                         (Crest) using{" "}
                         <span style={{ fontStyle: "italic", color: "" }}>
                           OpenSearch/AWS/React/Redux
