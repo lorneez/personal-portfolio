@@ -17,18 +17,22 @@ function HomePage() {
     switch (num) {
       case 1:
         return open1
-          ? "⬆️ Sparrow Labs: Software Engineer"
-          : "⬇️ Sparrow Labs: Software Engineer";
+          ? "⬆️ TikTok: Software Engineer"
+          : "⬇️ TikTok: Software Engineer";
       case 2:
         return open2
-          ? "⬆️ Capital One: Software Engineer Intern"
-          : "⬇️ Capital One: Software Engineer Intern";
+          ? "⬆️ Sparrow Labs: Software Engineer"
+          : "⬇️ Sparrow Labs: Software Engineer";
       case 3:
         return open3
-          ? "⬆️ Sparrow Labs: Software Engineering Intern"
-          : "⬇️ Sparrow Labs: Software Engineering Intern";
+          ? "⬆️ Capital One: Software Engineer Intern"
+          : "⬇️ Capital One: Software Engineer Intern";
       case 4:
         return open4
+          ? "⬆️ Sparrow Labs: Software Engineering Intern"
+          : "⬇️ Sparrow Labs: Software Engineering Intern";
+      case 5:
+        return open5
           ? "⬆️ Lorne is passionate about blockchain technology."
           : "⬇️ Lorne is passionate about blockchain technology.";
       default:
@@ -64,6 +68,7 @@ function HomePage() {
                 <div className={"title"}>
                   This is what Lorne has been up to...
                 </div>
+              
               </FadeIn>
               <FadeIn>
                 <div>
@@ -80,8 +85,33 @@ function HomePage() {
                         padding: "5px",
                       }}
                     >
+                      <div>Effects</div>
+                      <div>April 2004 - Present</div>
+                      <div className={"pl-5"}>
+                        - Loki
+                      </div>
+                    </div>
+                  </Collapsible>
+                </div>
+                <div className={"pl-6"}></div>
+              </FadeIn>
+              <FadeIn>
+                <div>
+                  <Collapsible
+                    trigger={getString(2)}
+                    onOpening={() => setOpen2(!open2)}
+                    onClosing={() => setOpen2(!open2)}
+                  >
+                    <div
+                      className={"pl-3 mb-3 mt-2"}
+                      style={{
+                        background: "#61E294",
+                        borderRadius: "5px",
+                        padding: "5px",
+                      }}
+                    >
                       <div>Backend, AWS</div>
-                      <div>June 2022 - Present</div>
+                      <div>June 2022 - March 2024</div>
                       <div className={"pl-5"}>
                         - Designed and built out a data analytics platform
                         (Crest) using{" "}
@@ -116,9 +146,9 @@ function HomePage() {
               <FadeIn>
                 <div>
                   <Collapsible
-                    trigger={getString(2)}
-                    onOpening={() => setOpen2(!open2)}
-                    onClosing={() => setOpen2(!open2)}
+                    trigger={getString(3)}
+                    onOpening={() => setOpen3(!open3)}
+                    onClosing={() => setOpen3(!open3)}
                   >
                     <div
                       className={"pl-3 mb-3 mt-2"}
@@ -155,9 +185,9 @@ function HomePage() {
               <FadeIn>
                 <div>
                   <Collapsible
-                    trigger={getString(3)}
-                    onOpening={() => setOpen3(!open3)}
-                    onClosing={() => setOpen3(!open3)}
+                    trigger={getString(4)}
+                    onOpening={() => setOpen4(!open4)}
+                    onClosing={() => setOpen4(!open4)}
                   >
                     <div
                       className={"pl-3 mb-3 mt-2"}
@@ -271,7 +301,7 @@ function HomePage() {
               <span
                 style={{ fontWeight: "bold", fontStyle: "", color: "#61E294" }}
               >
-                12/18/2023
+                4/23/2024
               </span>
               .
             </div>

@@ -33,7 +33,7 @@ function ProfileComponent() {
         }}
       >
         <TextLoop>
-          <span style={{ color: "#61E294" }}>Engineer @ Sparrow</span>
+          <span style={{ color: "#61E294" }}>Engineer @ TikTok</span>
           <span style={{ color: "#61E294" }}>Duke Alumni</span>
           <span style={{ color: "#61E294" }}>Eagle Scout</span>
           <span style={{ color: "#61E294" }}>Fitness Enthusiast</span>
