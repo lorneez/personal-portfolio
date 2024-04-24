@@ -86,7 +86,7 @@ function HomePage() {
                       }}
                     >
                       <div>Effects</div>
-                      <div>April 2004 - Present</div>
+                      <div>April 2024 - Present</div>
                       <div className={"pl-5"}>
                         - Loki
                       </div>
