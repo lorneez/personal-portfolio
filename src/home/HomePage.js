@@ -262,9 +262,9 @@ function HomePage() {
               <FadeIn>
                 <div>
                   <Collapsible
-                    trigger={getString(4)}
-                    onOpening={() => setOpen4(!open4)}
-                    onClosing={() => setOpen4(!open4)}
+                    trigger={getString(5)}
+                    onOpening={() => setOpen4(!open5)}
+                    onClosing={() => setOpen4(!open5)}
                   >
                     <div
                       className={"pl-3 mb-3 mt-2"}
