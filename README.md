@@ -1,70 +1,225 @@
-# Getting Started with Create React App
+# Lorne Zhang - Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, scalable portfolio website built with React 19, TypeScript, Tailwind CSS, and deployed using SST (Serverless Stack).
 
-## Available Scripts
+## 🚀 Tech Stack
 
-In the project directory, you can run:
+- **Frontend Framework**: React 19
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Build Tool**: Vite
+- **Routing**: React Router v7
+- **Deployment**: SST (Serverless Stack) on AWS
+- **Hosting**: AWS S3 + CloudFront
 
-### `npm start`
+## 📁 Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+portfolio/
+├── src/
+│   ├── pages/           # Page components (Bio, Projects, Career)
+│   ├── components/      # Reusable components (Layout, Navigation)
+│   ├── hooks/           # Custom React hooks
+│   ├── assets/          # Images and static files
+│   ├── types/           # TypeScript type definitions
+│   ├── App.tsx          # Main app component with routing
+│   ├── main.tsx         # App entry point
+│   └── index.css        # Global styles with Tailwind
+├── public/              # Static assets
+├── sst.config.ts        # SST deployment configuration
+├── vite.config.ts       # Vite build configuration
+├── tailwind.config.js   # Tailwind CSS configuration
+└── tsconfig.json        # TypeScript configuration
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🛠️ Development
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js 18+ and npm
+- AWS account (for deployment)
+- AWS CLI configured with credentials
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Install dependencies
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Running Locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Start development server (runs on http://localhost:5173)
+npm run dev
+```
 
-### `npm run eject`
+### Building for Production
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+# Type-check and build
+npm run build
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Preview production build locally
+npm run preview
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🚢 Deployment with SST
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### First-Time Setup
 
-## Learn More
+1. **Install AWS CLI** (if not already installed):
+   ```bash
+   # macOS
+   brew install awscli
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   # Or download from https://aws.amazon.com/cli/
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Configure AWS credentials**:
+   ```bash
+   aws configure
+   # Enter your AWS Access Key ID, Secret Access Key, region (e.g., us-east-1)
+   ```
 
-### Code Splitting
+3. **Initialize SST** (if needed):
+   ```bash
+   npx sst init
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Deploying
 
-### Analyzing the Bundle Size
+```bash
+# Deploy to development stage
+npm run deploy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Deploy to production stage
+sst deploy --stage production
+```
 
-### Making a Progressive Web App
+### Managing Your Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+# View deployment info and outputs
+sst list
 
-### Advanced Configuration
+# Remove deployed resources (be careful!)
+npm run remove
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# View CloudWatch logs
+sst logs
+```
 
-### Deployment
+### Adding a Custom Domain
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To use a custom domain (e.g., `lornezhang.com`):
 
-### `npm run build` fails to minify
+1. **Register domain** in Route 53 or your DNS provider
+2. **Update `sst.config.ts`**:
+   ```typescript
+   domain: {
+     name: "lornezhang.com",
+     redirects: ["www.lornezhang.com"],
+   }
+   ```
+3. **Deploy**: SST will automatically set up SSL/TLS certificates and configure CloudFront
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📝 Customization Guide
+
+### Update Bio Page
+Edit [src/pages/Bio.tsx](src/pages/Bio.tsx) to update:
+- Profile image
+- Role descriptions
+- About me text
+- Technical interests
+
+### Add Projects
+Edit [src/pages/Projects.tsx](src/pages/Projects.tsx) to add your projects to the `projects` array:
+```typescript
+{
+  title: 'Your Project',
+  description: 'Project description',
+  technologies: ['Tech1', 'Tech2'],
+  link: 'https://project-url.com',
+  github: 'https://github.com/...',
+}
+```
+
+### Update Work Experience
+Edit [src/pages/Career.tsx](src/pages/Career.tsx) to modify the `experiences` array with your work history.
+
+### Customize Colors
+Edit [tailwind.config.js](tailwind.config.js) to change the color palette:
+```javascript
+theme: {
+  extend: {
+    colors: {
+      primary: {
+        // Your custom color shades
+      }
+    }
+  }
+}
+```
+
+## 🏗️ Architecture
+
+The site is deployed as a static website on AWS:
+
+- **S3 Bucket**: Hosts the built static files
+- **CloudFront**: CDN for fast global delivery
+- **Route 53**: DNS management (when using custom domain)
+- **ACM**: SSL/TLS certificates (automatic with SST)
+
+SST handles all infrastructure provisioning and deployment automatically.
+
+## 📦 Available Scripts
+
+- `npm run dev` - Start Vite dev server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run deploy` - Deploy to AWS using SST
+- `npm run remove` - Remove deployed AWS resources
+
+## 🔧 Environment Variables
+
+To add environment variables:
+
+1. Create `.env` file (gitignored):
+   ```
+   VITE_API_URL=https://api.example.com
+   ```
+
+2. Update `sst.config.ts`:
+   ```typescript
+   environment: {
+     VITE_API_URL: process.env.VITE_API_URL,
+   }
+   ```
+
+3. Access in code:
+   ```typescript
+   const apiUrl = import.meta.env.VITE_API_URL
+   ```
+
+## 🎨 Design System
+
+- **Typography**: Uses Inter for body text and Barlow for headings
+- **Color Scheme**: Clean, professional palette with blue primary color
+- **Responsive**: Mobile-first design with Tailwind breakpoints
+- **Components**: Reusable card-based layout with consistent spacing
+
+## 📄 License
+
+Private - All rights reserved
+
+## 👤 Contact
+
+Lorne Zhang
+- Portfolio: [Deployed URL after running `npm run deploy`]
+- GitHub: [Your GitHub]
+- LinkedIn: [Your LinkedIn]
+
+---
+
+Built with ❤️ using modern web technologies
