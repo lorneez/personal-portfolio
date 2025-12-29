@@ -77,7 +77,7 @@ export default function Bio() {
                 <span className="text-terminal-yellow">const</span> <span className="text-terminal-blue">lorneZhang</span> <span className="text-terminal-text">=</span> <span className="text-terminal-cyan">{`{`}</span>
               </h1>
               <p className="text-sm sm:text-base text-terminal-comment italic font-mono pl-4 sm:pl-6">
-                <span className="text-terminal-blue">pronunciation:</span> <span className="text-terminal-orange">"lorn zhahng"</span><span className="text-terminal-text">,</span>
+                <span className="text-terminal-blue">pronunciation:</span> <span className="text-terminal-orange">"lorn (like Lorne Michaels from SNL; or 'corn' with an L)"</span><span className="text-terminal-text">,</span>
               </p>
               <p className="text-sm sm:text-base font-mono pl-4 sm:pl-6">
                 <span className="text-terminal-blue">location:</span> <span className="text-terminal-orange">"Bay Area 📍"</span><span className="text-terminal-text">,</span>
