@@ -4,12 +4,12 @@ frontend:
     preBuild:
       commands:
         - export NVM_DIR="$HOME/.nvm"
-        - [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+        - 'if [ -s "$NVM_DIR/nvm.sh" ]; then . "$NVM_DIR/nvm.sh"; fi'
         - nvm install 20
         - nvm use 20
-        - node --version
-        - npm --version
-        - npm ci --legacy-peer-deps
+        - node -v
+        - npm -v
+        - npm ci
     build:
       commands:
         - npm run build
