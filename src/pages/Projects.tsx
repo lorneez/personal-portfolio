@@ -15,7 +15,7 @@ export default function Projects() {
         'Hourly price updates for equity assets',
       ],
       technologies: ['Next.js', 'Tailwind CSS', 'shadcn/ui', 'SST', 'DynamoDB', 'JWT Auth', 'Route53'],
-      link: undefined,
+      link: 'https://www.networthing.app',
       github: undefined,
       filename: 'NetworthTracker.tsx',
       functionName: 'NetworthTracker',
@@ -118,8 +118,10 @@ export default function Projects() {
             {(project.link || project.github) && (
               <div className="flex gap-4">
                 {project.link && (
-                  <a
+                 <a
                     href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-terminal-blue hover:text-terminal-cyan font-mono text-sm flex items-center gap-1 transition-colors"
                   >
                     <span>view()</span>
