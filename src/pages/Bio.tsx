@@ -4,6 +4,7 @@ import dukeGraduation from '@/assets/duke_graduation.jpeg'
 import japan1 from '@/assets/japan_1.jpeg'
 import japan2 from '@/assets/japan_2.jpeg'
 import { useTypingEffect } from '@/hooks/useTypingEffect'
+import ContactForm from '@/components/ContactForm'
 
 export default function Bio() {
   const images = [duke1, dukeGraduation, japan1, japan2]
@@ -238,6 +239,7 @@ export default function Bio() {
           {`}`}
         </div>
       </div>
+      <ContactForm />
     </div>
   )
 }

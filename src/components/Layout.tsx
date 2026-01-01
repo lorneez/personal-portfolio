@@ -1,6 +1,8 @@
 import { ReactNode, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
+const LAST_UPDATED = new Date(2025, 11, 31); // month is 0-based
+
 interface LayoutProps {
   children: ReactNode
 }
@@ -125,7 +127,14 @@ export default function Layout({ children }: LayoutProps) {
               <span className="text-terminal-blue">©</span> {new Date().getFullYear()} Lorne Zhang<span className="text-terminal-comment">;</span> <span className="text-terminal-comment">// All rights reserved</span>
             </div>
             <div className="text-terminal-comment text-xs font-mono">
-              <span className="text-terminal-comment">/* </span>Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}<span className="text-terminal-comment"> */</span>
+             <span className="text-terminal-comment">/* </span>
+              Last updated:{' '}
+              {new Date(LAST_UPDATED).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+              <span className="text-terminal-comment"> */</span>
             </div>
           </div>
         </div>
