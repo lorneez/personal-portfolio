@@ -1,7 +1,7 @@
 import { ReactNode, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-const LAST_UPDATED = new Date(2025, 11, 31); // month is 0-based
+const LAST_UPDATED = new Date(2026, 1, 22); // month is 0-based
 
 interface LayoutProps {
   children: ReactNode

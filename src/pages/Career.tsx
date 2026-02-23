@@ -7,8 +7,20 @@ export default function Career() {
   const experiences = [
     {
       company: 'Meta',
+      role: 'Senior Software Engineer - Capacity',
+      period: 'February 2026 - Present',
+      duration: '1 mo',
+      location: 'Menlo Park, CA',
+      description: [
+        'Building infrastructure solutions in the Capacity organization (Management & Fulfillment) with a focus on regionalization',
+      ],
+      technologies: ['Infrastructure', 'Regionalization', 'Hack', 'Python', 'C++'],
+    },
+    {
+      company: 'Meta',
       role: 'Software Engineer - Capacity',
-      period: 'May 2025 - Present',
+      period: 'May 2025 - February 2026',
+      duration: '9 mos',
       location: 'Menlo Park, CA',
       description: [
         'Building infrastructure solutions in the Capacity organization (Management & Fulfillment) with a focus on regionalization',
@@ -19,6 +31,7 @@ export default function Career() {
       company: 'TikTok',
       role: 'Software Engineer - Effects',
       period: 'April 2024 - May 2025',
+      duration: '1 yr 2 mos',
       location: 'San Jose, CA',
       description: [
         'Developed creative tools and filters on the Effects team, enhancing content creation for millions of TikTok users',
@@ -31,6 +44,7 @@ export default function Career() {
       company: 'Sparrow Labs',
       role: 'Software Engineer',
       period: 'June 2022 - March 2024',
+      duration: '1 yr 10 mos',
       location: 'New York, NY',
       description: [
         'Developed full-stack applications serving enterprise clients',
@@ -43,6 +57,7 @@ export default function Career() {
       company: 'Capital One',
       role: 'Software Engineering Intern',
       period: 'June 2021 - August 2021',
+      duration: '3 mos',
       location: 'McLean, VA',
       description: [
         'Built internal tools to improve developer productivity',
@@ -55,6 +70,7 @@ export default function Career() {
       company: 'Sparrow Labs',
       role: 'Software Engineering Intern',
       period: 'December 2020 - May 2022',
+      duration: '1 yr 6 mos',
       location: 'Remote',
       description: [
         'Built credit pull flow that fetched and analyzed credit data for prequalifying users across 17+ student loan providers',
@@ -131,7 +147,7 @@ export default function Career() {
                   <div className="flex flex-wrap gap-3 text-sm text-terminal-comment font-mono">
                     <span className="flex items-center gap-1">
                       <span className="text-terminal-blue">📅</span>
-                      {exp.period}
+                      {exp.period} · {exp.duration}
                     </span>
                     <span className="flex items-center gap-1">
                       <span className="text-terminal-green">📍</span>
