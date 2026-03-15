@@ -1,7 +1,7 @@
 import { ReactNode, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
-const LAST_UPDATED = new Date(2026, 1, 22); // month is 0-based
+const LAST_UPDATED = new Date(2026, 2, 15); // month is 0-based
 
 interface LayoutProps {
   children: ReactNode
@@ -13,7 +13,7 @@ export default function Layout({ children }: LayoutProps) {
 
   const navLinks = [
     { path: '/', label: 'Bio' },
-    { path: '/projects', label: 'Projects' },
+    // { path: '/projects', label: 'Projects' }, // temporarily disabled
     { path: '/career', label: 'Career' },
   ]
 
